@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>First Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h1>First Project Flask</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYXj7sgzacSKFTO7Qnn2-l5neHy2B105An8O6flkGmjx6Gb3rUqb1WARCC&s=10.jpg'> "alt="Totoro" class"gambar">
+        <form method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama">
+            <button type="submit">Kirim</button>
+        </form>
+
+        {% if nama %}
+            <label class="hasil">Halo, {{ nama }}!</label>
+        {% endif %}
+    </div>
+</body>
+</html>
